@@ -57,8 +57,8 @@ function changeColor() {
 }
 
 function toggleErase() {
-    isEraserActive = !isEraserActive;
     isRainbowActive && toggleRainbow();
+    isEraserActive = !isEraserActive;
 
     if(isEraserActive) {
         eraserBtn.classList.add("active");
@@ -76,6 +76,7 @@ function changeSize() {
 }
 
 function toggleRainbow() {
+    isEraserActive && toggleErase();
     isRainbowActive = !isRainbowActive;
 
     if(isRainbowActive) {
